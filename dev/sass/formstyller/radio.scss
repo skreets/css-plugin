@@ -1,0 +1,155 @@
+.radio-control-default {
+	margin-bottom: 40px;
+	
+	.control {
+		display: block;
+		position: relative;
+		padding-left: 30px;
+		margin-bottom: 15px;
+		padding-top: 3px;
+		cursor: pointer;
+		font-size: 18px;
+
+		input {
+			position: absolute;
+			z-index: -1;
+			opacity: 0;
+
+			&:checked {
+
+				& ~ .control_indicator {
+					background: #fff;
+
+					&:after {
+						display: block;
+					}
+				}
+			}
+
+			&:disabled {
+
+				& ~ .control_indicator {
+					background: #fff;
+					opacity: .6;
+					pointer-events: none;
+
+					&:after {
+						background: #eee;
+					}
+				}
+			}
+		}
+
+		&_indicator {
+			position: absolute;
+			top: 2px;
+			left: 0;
+			height: 20px;
+			width: 20px;
+			background: #fff;
+			border-radius: 50%;
+			border: 0px solid #000;
+
+			&:after {
+				box-sizing: unset;
+				content: '';
+				position: absolute;
+				display: none;
+				left: 6px;
+				top: 6px;
+				height: 8px;
+				width: 8px;
+				border-radius: 50%;
+				background: #ccc;
+			}
+		}
+
+		&:hover {
+
+			.control_indicator {
+
+				&:after {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+.radio-control-border {
+	margin-bottom: 40px;
+	
+	.control {
+		display: block;
+		position: relative;
+		padding-left: 30px;
+		margin-bottom: 15px;
+		padding-top: 3px;
+		cursor: pointer;
+		font-size: 18px;
+
+		input {
+			position: absolute;
+			z-index: -1;
+			opacity: 0;
+
+			&:checked {
+
+				& ~ .control_indicator {
+					border-color: #ccc;
+
+					&:after {
+						display: block;
+					}
+				}
+			}
+
+			&:disabled {
+
+				& ~ .control_indicator {
+					background: transparent;
+					opacity: .6;
+					pointer-events: none;
+
+					&:after {
+						background: #ccc;
+					}
+				}
+			}
+		}
+
+		&_indicator {
+			position: absolute;
+			top: 0px;
+			left: 0;
+			height: 20px;
+			width: 20px;
+			border-radius: 50%;
+			background: #fff;
+			border: 1px solid #ccc;
+
+			&:after {
+				box-sizing: unset;
+				content: '';
+				position: absolute;
+				display: none;
+				left: 6px;
+				top: 6px;
+				height: 8px;
+				width: 8px;
+				border-radius: 50%;
+				background: #ccc;
+			}
+		}
+
+		&:hover {
+
+			.control_indicator {
+
+				&:after {
+					display: block;
+				}
+			}
+		}
+	}
+}
