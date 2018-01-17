@@ -4,6 +4,24 @@
     margin: 25vh 0;
   }
 
+  .git {
+    color: #ccc;
+    width: 50px;
+    display: block;
+    margin: 30px auto -70px;
+    text-decoration: none;
+    @include transition;
+
+    &:before {
+      content: $icon-github;
+      font: 50px $icon;
+    }
+
+    &:hover {
+      color: #333;
+    }
+  }
+
   .main {
     display: flex;
     justify-content: center;
